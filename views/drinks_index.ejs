@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Drinks</title>
+    <style>
+      body {
+        color: blanchedalmond;
+        background-color: steelblue;
+      }
+
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      li a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to gitPub!</h1>
+    <div class="container">
+        <ul>
+            <% allDrinks.forEach(drink => { %>
+                <li>
+                    <a href="#"><%=drink.name %></a>
+                </li>
+           <%  }) %> 
+        </ul>
+    </div>
+  </body>
+</html>

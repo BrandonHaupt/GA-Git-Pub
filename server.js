@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const PORT = process.env.PORT
 const app = express()
-const methodOverride = require('method-override')
+// const methodOverride = require('method-override')
 const drinks = require('./models/drinks')
 
 // HOME ROUTE - Redirects to the localhost:3000/drinks
@@ -16,10 +16,13 @@ app.get('/drinks', (req,res) => {
     })
 })
 
+// SHOW Route
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
 
-    // drinks[req.params.id] = req.body
+    res.render("drinks_show.ejs", {
+        drink: drinks[req.params.id],
+        id: req.params.id
+    })
 })
 
 

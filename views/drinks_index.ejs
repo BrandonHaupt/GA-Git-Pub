@@ -27,15 +27,24 @@
       li a {
         text-decoration: none;
       }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
     </style>
+
   </head>
   <body>
     <h1>Welcome to gitPub!</h1>
     <div class="container">
         <ul>
             <% allDrinks.forEach(drink => { %>
+               <% const drinkName = drink.name %>
+               <% const capWord = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
                 <li>
-                    <a href="#"><%=drink.name %></a>
+                    <a href="#"><%=capWord %></a>
                 </li>
            <%  }) %> 
         </ul>

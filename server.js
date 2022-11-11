@@ -1,9 +1,12 @@
+require('dotenv').config()
 const express = require('express')
 const PORT = process.env.PORT
 const app = express()
+const methodOverride = require('method-override')
 
-
-
+app.get('/', (req,res) => {
+    console.log("hello")
+})
 
 
 

@@ -40,13 +40,14 @@
     <h1>Welcome to gitPub!</h1>
     <div class="container">
         <ul>
-            <% allDrinks.forEach(drink => { %>
+            <% for(let i = 0; i < allDrinks.length; i++){ %>
+                <% const drink = allDrinks[i] %>
                <% const drinkName = drink.name %>
                <% const capWord = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
                 <li>
-                    <a href="#"><%=capWord %></a>
+                    <a href="/drinks/<%=i %> "><%=capWord %></a>
                 </li>
-           <%  }) %> 
+           <%  } %> 
         </ul>
     </div>
   </body>

@@ -39,6 +39,7 @@
   <body>
     <h1>Welcome to gitPub!</h1>
     <div class="container">
+        <h2>Drinks:</h2>
         <ul>
             <% for(let i = 0; i < allDrinks.length; i++){ %>
                 <% const drink = allDrinks[i] %>
@@ -46,6 +47,20 @@
                <% const capWord = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
                 <li>
                     <a href="/drinks/<%=i %> "><%=capWord %></a>
+                </li>
+           <%  } %> 
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Food:</h2>
+        <ul>
+            <% for(let j = 0; j < allFoods.length; j++){ %>
+                <% const food = allFoods[j] %>
+               <% const foodName = food.name %>
+               <% const capFoodWord = foodName.charAt(0).toUpperCase() + foodName.slice(1) %>
+                <li>
+                    <a href="/drinks/<%=j %> "><%=capFoodWord %></a>
                 </li>
            <%  } %> 
         </ul>
